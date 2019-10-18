@@ -18,7 +18,6 @@ function Copyright() {
   );
 }
 
-
 const App: React.FC = () => {
   return (
     <Container maxWidth="sm">
@@ -31,6 +30,6 @@ const App: React.FC = () => {
       </Box>
     </Container>
   );
-}
+};
 
 export default App;
