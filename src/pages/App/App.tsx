@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
-import ProTip from '../../ProTip';
+import ProTip from '../../components/ProTip';
 
 function Copyright() {
   return (
@@ -18,7 +18,6 @@ function Copyright() {
   );
 }
 
-
 const App: React.FC = () => {
   return (
     <Container maxWidth="sm">
@@ -31,6 +30,6 @@ const App: React.FC = () => {
       </Box>
     </Container>
   );
-}
+};
 
 export default App;
