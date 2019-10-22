@@ -1,3 +1,24 @@
 module.exports = {
-  extends: ['react-app', 'prettier/@typescript-eslint'],
+  parser: '@typescript-eslint/parser',
+  extends: [
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
+  ],
+  plugins: ['@typescript-eslint'],
+  rules: {
+    'no-var': 'error',
+    'prefer-const': 'error',
+  },
+  settings: {
+    react: {
+      pragma: 'React',
+      version: 'detect',
+    },
+  },
+  env: {
+    browser: true,
+    node: true,
+  },
 };

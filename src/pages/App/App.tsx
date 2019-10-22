@@ -7,7 +7,7 @@ import ProTip from '../../components/ProTip';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 
-function Copyright() {
+function Copyright(): JSX.Element {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
