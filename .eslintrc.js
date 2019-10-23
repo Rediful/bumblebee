@@ -10,6 +10,7 @@ module.exports = {
   rules: {
     'no-var': 'error',
     'prefer-const': 'error',
+    'react/prop-types': 0,
   },
   settings: {
     react: {
