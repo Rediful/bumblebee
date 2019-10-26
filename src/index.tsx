@@ -2,17 +2,21 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import { ThemeProvider } from '@material-ui/styles';
 
 import configureStore from './store';
 
-import App from './pages/Chat';
+import Routes from './routes';
+import theme from './theme';
 
 const store = configureStore();
 
 const Root: React.FC<{}> = () => {
   return (
     <Provider store={store}>
-      <App />
+      <ThemeProvider theme={theme}>
+        <Routes />
+      </ThemeProvider>
     </Provider>
   );
 };

@@ -6,6 +6,7 @@ import Link from '@material-ui/core/Link';
 import ProTip from '../../components/ProTip';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
+import AppBar from '../../components/AppBar';
 
 function Copyright(): JSX.Element {
   return (
@@ -32,16 +33,19 @@ const App: React.FC = () => {
   `;
 
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Create React App v4-beta example with TypeScript
-        </Typography>
-        <StyledButton>Styled Button</StyledButton>
-        <ProTip />
-        <Copyright />
-      </Box>
-    </Container>
+    <React.Fragment>
+      <AppBar />
+      <Container maxWidth="sm">
+        <Box my={4}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            Create React App v4-beta example with TypeScript
+          </Typography>
+          <StyledButton>Styled Button</StyledButton>
+          <ProTip />
+          <Copyright />
+        </Box>
+      </Container>
+    </React.Fragment>
   );
 };
 
