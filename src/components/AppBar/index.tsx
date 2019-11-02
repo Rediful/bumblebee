@@ -6,10 +6,10 @@ import { useStyles } from './style';
 
 interface Props {
   open: boolean;
-  handleOpen: () => void;
+  handleOpenDrawer: () => void;
 }
 
-const index: React.FC<Props> = ({ open, handleOpen }: Props) => {
+const index: React.FC<Props> = ({ open, handleOpenDrawer }: Props) => {
   const classes = useStyles();
 
   return (
@@ -23,7 +23,7 @@ const index: React.FC<Props> = ({ open, handleOpen }: Props) => {
         <IconButton
           color="inherit"
           aria-label="open drawer"
-          onClick={handleOpen}
+          onClick={handleOpenDrawer}
           edge="start"
           className={clsx(classes.menuButton, {
             [classes.hide]: open,

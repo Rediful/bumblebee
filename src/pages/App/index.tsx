@@ -22,18 +22,20 @@ const App: React.FC = () => {
   const [open, setOpen] = useState(false);
   const classes = useStyles();
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   return (
     <div className={classes.root}>
-      <AppBar open={open} handleOpen={handleOpen} />
-      <Drawer open={open} handleClose={handleClose} />
+      <AppBar
+        open={open}
+        handleOpenDrawer={() => {
+          setOpen(true);
+        }}
+      />
+      <Drawer
+        open={open}
+        handleCloseDrawer={() => {
+          setOpen(false);
+        }}
+      />
       <Container maxWidth="sm" className={classes.container}>
         <Box my={4}>
           <Typography variant="h4" component="h1" gutterBottom>

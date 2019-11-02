@@ -16,10 +16,10 @@ import { useTheme } from '@material-ui/core/styles';
 
 interface Props {
   open: boolean;
-  handleClose: () => void;
+  handleCloseDrawer: () => void;
 }
 
-const index: React.FC<Props> = ({ open, handleClose }: Props) => {
+const index: React.FC<Props> = ({ open, handleCloseDrawer }: Props) => {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -39,7 +39,7 @@ const index: React.FC<Props> = ({ open, handleClose }: Props) => {
       open={open}
     >
       <div className={classes.toolbar}>
-        <IconButton onClick={handleClose}>
+        <IconButton onClick={handleCloseDrawer}>
           {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
         </IconButton>
       </div>
