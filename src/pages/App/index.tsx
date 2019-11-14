@@ -26,13 +26,13 @@ const App: React.FC = () => {
     <div className={classes.root}>
       <AppBar
         open={open}
-        handleOpenDrawer={() => {
+        handleOpenDrawer={(): void => {
           setOpen(true);
         }}
       />
       <Drawer
         open={open}
-        handleCloseDrawer={() => {
+        handleCloseDrawer={(): void => {
           setOpen(false);
         }}
       />
