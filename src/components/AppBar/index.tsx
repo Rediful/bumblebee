@@ -32,7 +32,7 @@ const index: React.FC<Props> = ({ open, handleOpenDrawer }: Props) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" noWrap>
-          Mini variant drawer
+          Bumblebee
         </Typography>
       </Toolbar>
     </AppBar>

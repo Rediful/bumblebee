@@ -6,9 +6,9 @@ import { ThemeProvider } from '@material-ui/styles';
 
 import configureStore from './store';
 
-import Routes from './routes';
 import theme from './theme';
 import { CssBaseline } from '@material-ui/core';
+import App from './app';
 
 const store = configureStore();
 
@@ -17,7 +17,7 @@ const Root: React.FC<{}> = () => {
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Routes />
+        <App />
       </ThemeProvider>
     </Provider>
   );
